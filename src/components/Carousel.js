@@ -21,8 +21,9 @@ const PrevArrow = ({ onClick }) => {
   );
 };
 
-const Carousel = (props) => {
+const Carousel = (props, slidesToShow=3) => {
   const [imageIndex, setImageIndex] = useState(0);
+  const ceva = props.myData;
 
   const videos = props.myData;
 
@@ -31,7 +32,7 @@ const Carousel = (props) => {
     infinite: true,
     dots: false,
     speed: 300,
-    // slidesToShow: slidesToShow,
+    slidesToShow: slidesToShow,
     centerPadding: "0",
     swipeToSlide: true,
     focusOnSelect: true,
@@ -55,16 +56,23 @@ const Carousel = (props) => {
       },
     ],
   };
-
-  const templateImages = videos.map((image, idx) => {
-    if (image !== null) {
+   const realUrl=`https://www.youtube.com/embed/`
+  const templateImages = Object.values(ceva).map((item, idx) => {
+    if (item !== null) {
       return (
         <div
           className={idx === imageIndex ? "activeSlide" : "slide"}
-          key={image.id}
+          key={item.videoId}
         >
           <div className="slideWrapper">
-            {image.code ? image.code : <img src={image.src} alt={image.alt} />}
+            {/* {realUrl+item.videoId ? realUrl+item.videoId : <img src={realUrl+item.videoId} alt='' />} */}
+            <iframe width="560" 
+          height="315" 
+          src={realUrl+item.videoId}
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          >
+        </iframe>
           </div>
         </div>
       );
@@ -73,6 +81,9 @@ const Carousel = (props) => {
   });
 
   return <Slider {...settings}>{templateImages}</Slider>;
+  // return <div>ceva
+  //   {Object.values(ceva).map((item)=>console.log(realUrl+item.videoId))}
+  // </div>
 };
 
 export default Carousel;
