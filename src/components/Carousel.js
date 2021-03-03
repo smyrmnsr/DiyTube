@@ -21,15 +21,17 @@ const PrevArrow = ({ onClick }) => {
   );
 };
 
-const Carousel = ({ images, slidesToShow = 3 }) => {
+const Carousel = (props) => {
   const [imageIndex, setImageIndex] = useState(0);
+
+  const videos = props.myData;
 
   const settings = {
     centerMode: true,
     infinite: true,
     dots: false,
     speed: 300,
-    slidesToShow: slidesToShow,
+    // slidesToShow: slidesToShow,
     centerPadding: "0",
     swipeToSlide: true,
     focusOnSelect: true,
@@ -54,7 +56,7 @@ const Carousel = ({ images, slidesToShow = 3 }) => {
     ],
   };
 
-  const templateImages = images.map((image, idx) => {
+  const templateImages = videos.map((image, idx) => {
     if (image !== null) {
       return (
         <div

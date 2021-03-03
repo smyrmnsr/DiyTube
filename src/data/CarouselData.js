@@ -7,7 +7,7 @@ export const VIDEOS = [
           src="https://www.youtube.com/embed/a43LXqRwQC8" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
+          >
 
         </iframe>
       ),
@@ -20,7 +20,7 @@ export const VIDEOS = [
           src="https://www.youtube.com/embed/Perqf0dOGLk" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
+          >
         </iframe>
       ),
     },
@@ -32,7 +32,7 @@ export const VIDEOS = [
           src="https://www.youtube.com/embed/puFSdfIRNIw" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
+          >
         </iframe>
       ),
     },
@@ -44,7 +44,7 @@ export const VIDEOS = [
           src="https://www.youtube.com/embed/qczNxoG8s6o" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
+          >
         </iframe>
       ),
     },
@@ -56,7 +56,7 @@ export const VIDEOS = [
           src="https://www.youtube.com/embed/L137iULaIe4" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
+          >
         </iframe>
       ),
     },
