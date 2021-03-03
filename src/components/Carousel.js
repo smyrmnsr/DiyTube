@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-
 import "./Carousel.css";
 
 const NextArrow = ({ onClick }) => {
@@ -21,18 +20,16 @@ const PrevArrow = ({ onClick }) => {
   );
 };
 
-const Carousel = (props, slidesToShow=3) => {
+const Carousel = ({slideToShow = 3, myData}) => {
   const [imageIndex, setImageIndex] = useState(0);
-  const ceva = props.myData;
-
-  const videos = props.myData;
+  const ceva = myData;
 
   const settings = {
     centerMode: true,
     infinite: true,
     dots: false,
     speed: 300,
-    slidesToShow: slidesToShow,
+    slidesToShow: slideToShow,
     centerPadding: "0",
     swipeToSlide: true,
     focusOnSelect: true,
@@ -56,8 +53,8 @@ const Carousel = (props, slidesToShow=3) => {
       },
     ],
   };
-   const realUrl=`https://www.youtube.com/embed/`
-  const templateImages = Object.values(ceva).map((item, idx) => {
+    const realUrl=`https://www.youtube.com/embed/`
+    const templateImages = Object.values(ceva).map((item, idx) => {
     if (item !== null) {
       return (
         <div
@@ -66,7 +63,7 @@ const Carousel = (props, slidesToShow=3) => {
         >
           <div className="slideWrapper">
             {/* {realUrl+item.videoId ? realUrl+item.videoId : <img src={realUrl+item.videoId} alt='' />} */}
-            <iframe width="560" 
+        <iframe width="560" 
           height="315" 
           src={realUrl+item.videoId}
           frameborder="0" 

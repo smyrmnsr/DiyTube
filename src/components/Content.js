@@ -4,7 +4,7 @@ import mokData from './mokData';
 import axios from 'axios';
 import{AppBar, Toolbar, Grid, Card, CardContent, CircularProgress, CardMedia, Typography} from "@material-ui/core";
 import Carousel from "./Carousel";
-import { VIDEOS } from "../data/CarouselData"
+
 
 
 
@@ -43,7 +43,6 @@ const Content = () => {
                     }
                 })
                 setMyData(newData);
-                // console.log(newData);
             });
         
     },[])
@@ -79,7 +78,7 @@ const Content = () => {
             )}
 
         </div>
-     );
+    );
 }
- 
+
 export default Content;
